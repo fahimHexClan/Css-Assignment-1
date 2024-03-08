@@ -1,10 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="font-size: 20px;">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <title>case-1</title>
+
+    <link rel="stylesheet" href="Asserts/normalize.css">
+
+    <style>
+
+        body {
+            overflow: hidden;
+        }
+
+        .box {
+            width: 50vw;
+            height: 50vh;
+            position: absolute;
+        }
+        .box:first-child {
+            background-color: red;
+        }
+        .box:nth-child(2) {
+            background-color: green;
+            right: 0;
+        }
+        .box:nth-child(3) {
+            background-color: orange;
+            bottom: 0;
+        }
+        .box:nth-child(4) {
+            background-color: deeppink;
+            right: 0;
+            bottom: 0;
+        }
+        .box>div {
+            width: 30%;
+            aspect-ratio: 1/1;
+            background-color: white;
+            border-radius: 100%;
+            position: absolute;
+
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        .box>div>div {
+            width: 40%;
+            aspect-ratio: 1/1;
+            background-color: red;
+            position: absolute;
+
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .mid-squire {
+            width: 15vw;
+            background-color: white;
+            aspect-ratio: 1/1;
+            position: absolute;
+
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+        .mid-squire>div {
+            width: 60%;
+            aspect-ratio: 1/1;
+            background-color: red;
+            border-radius: 100%;
+            position: absolute;
+
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
+        .smallRound {
+            width: 10vw;
+            aspect-ratio: 1/1;
+            background-color: white;
+            position: absolute;
+            border-radius: 100%;
+        }
+        #sm1 {
+            left: -5vw;
+            top: -5vw;
+        }
+        #sm2 {
+            right: -5vw;
+            top: -5vw;
+        }
+        #sm3 {
+            bottom: -5vw;
+            left: -5vw;
+        }
+
+        #sm4 {
+            right: -5vw;
+            bottom: -5vw;
+        }
+
+        #sm5 {
+            right: 0;
+            left: 0;
+            top: -5vw;
+            margin: auto;
+        }
+
+        #sm6 {
+            right: 0;
+            left: 0;
+            bottom: -5vw;
+            margin: auto;
+        }
+
+    </style>
+
+    </head>
+    <body>
+
+        <div class="box">
+            <div>
+                <div></div>
+            </div>
+        </div>
+        <div class="box">
+            <div>
+                <div></div>
+            </div>
+        </div>
+        <div class="box">
+            <div>
+                <div></div>
+            </div>
+        </div>
+        <div class="box">
+            <div>
+                <div></div>
+            </div>
+        </div>
+
+    <div id="sm1" class="smallRound"></div>
+    <div id="sm2" class="smallRound"></div>
+    <div id="sm3" class="smallRound"></div>
+    <div id="sm4" class="smallRound"></div>
+    <div id="sm5" class="smallRound"></div>
+    <div id="sm6" class="smallRound"></div>
+
+
+    <div class="mid-squire">
+        <div></div>
+    </div>
 
 </body>
 </html>
