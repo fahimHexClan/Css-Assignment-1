@@ -4,8 +4,85 @@
     <meta charset="UTF-8">
     <title>Case3</title>
     <link rel="stylesheet" href="Asserts/normalize.css">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #outer-border{
+            position: fixed;
+            width: 25vw; /* Half of the viewport width */
+            height: 25vw; /* Half of the viewport width */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 10px solid gray;
+            border-radius: 50%;
+            box-sizing: border-box;
+
+        }
+        .inner-border {
+            position: absolute;
+            width: 75%;
+            height: 75%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 10px solid red;
+            border-radius: 50%;
+            box-sizing: border-box;
+        }
+        div>div{
+            width: 20vw;
+            aspect-ratio: 1/1;
+            border-radius: 100%;
+            border-color: red;
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+
+        }
+        div>div>div{
+            width: 15vw;
+            aspect-ratio: 1/1;
+            background-color: #51065e;
+            border-radius: 100%;
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+        }
+        div>div>div>div{
+            width:70%;
+            aspect-ratio: 1/1;
+            font-size: xxx-large;
+            font-weight: bolder;
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+
+        }
+
+
+
+    </style>
 </head>
 <body>
+        <div id="outer-border">
+            <div class="inner-border">
+                <div>
+                    <div>Hello</div>
+                </div>
+            </div>
+        </div>
 
 </body>
 </html>
