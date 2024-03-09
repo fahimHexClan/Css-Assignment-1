@@ -2,89 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Case-3</title>
+    <title>Title</title>
     <link rel="stylesheet" href="Asserts/normalize.css">
+    <link rel="stylesheet" href="Asserts/fontawesome-free-6.5.1-web/css/all.min.css">
     <style>
-        body{
+        body {
             margin: 0;
             padding: 0;
         }
-        #outer-border{
-            position: fixed;
-            width: 19vw;
-            height: 19vw;
-            top: 50%;
-            left: 50%;
-            bottom: 50%;
-            transform: translate(-50%, -50%);
-            border: 10px solid gray;
-            border-radius: 50%;
-            box-sizing: border-box;
 
+        section {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        .inner-border {
-            position: absolute;
-            width: 17vw;
-            height: 17vw;
-            top: 100%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border: 10px solid red;
-            border-radius: 50%;
-            box-sizing: border-box;
-        }
-        div>div{
-            width: 20vw;
-            aspect-ratio: 1/1;
-            border-radius: 100%;
-            border-color: red;
-            position: absolute;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            top: 0;
-            margin: auto;
 
-        }
-        div>div>div{
-            width: 15vw;
-            aspect-ratio: 1/1;
-            background-color: #51065e;
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: #a500a5;
             border-radius: 100%;
-            position: absolute;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            top: 0;
-            margin: auto;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
         }
-        div>div>div>div{
-            width:70%;
-            aspect-ratio: 1/1;
+
+        div>h3 {
+            color: #f9f9f9;
             font-size: xxx-large;
-            font-weight: bolder;
-            position: absolute;
-            right: 0;
-            left: 0;
-            bottom:0;
-            top: 20%;
-            margin: auto;
-            color: white;
-
         }
 
+        div::before,
+        div::after {
+            content: "";
+            position: absolute;
+            border-radius: 100%;
+        }
 
+        div::before {
+            border: 10px solid #f60e0e;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
 
+        div::after {
+            border: 10px solid #ccc;
+            width: 220px;
+            height: 220px;
+            z-index: -2;
+        }
+
+        div:hover::before {
+            transform: rotate(360deg);
+            transition-duration: 3s;
+        }
     </style>
 </head>
 <body>
-        <div id="outer-border">
-            <div class="inner-border">
-                <div>
-                    <div>Hello</div>
-                </div>
-            </div>
-        </div>
-
+<section>
+    <div>
+        <h3>Hello</h3>
+    </div>
+</section>
 </body>
 </html>
